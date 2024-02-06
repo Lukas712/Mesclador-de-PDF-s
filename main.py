@@ -6,7 +6,8 @@ archive = os.listdir("arquivos")
 print(archive)
 
 for pdf in archive:
-    merge.append(f"arquivos/{pdf}")
+    if ".pdf" in pdf:
+        merge.append(f"arquivos/{pdf}")
 
 merge.write("Arquivos-Juntos.pdf")
 merge.close()
